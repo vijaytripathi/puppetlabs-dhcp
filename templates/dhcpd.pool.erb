@@ -9,7 +9,7 @@ subnet <%= @network %> netmask <%= @mask %> {
     failover peer "<%= @failover %>";
 <% end -%>
 <% if @range != '' -%>
-<% @range.each do |r| -%>
+<% @range.each_line do |r| -%>
     range <%= r %>;
 <% end -%>
 <% end -%>
